@@ -1,3 +1,8 @@
+'''
+concept: Greedy
+주어진 스킬트리의 스킬들을 하나씩 보며 현재 찍을 수 없을 경우 불가능한 케이스로 판별
+'''
+
 def solution(skill, skill_trees):
     answer = 0
     
