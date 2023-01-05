@@ -12,7 +12,7 @@ from math import ceil
 def solution(n,a,b):
     answer = 0
     
-    while a-b != 0:
+    while a != b:
         a, b = map(lambda x: ceil(x/2), (a,b))
         answer+=1
         
