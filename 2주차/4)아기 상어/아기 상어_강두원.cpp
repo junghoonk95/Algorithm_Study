@@ -1,22 +1,17 @@
 /*
 Concept: BFS
-
 먹이까지의 최단거리 계산 이후 가장 상단 왼쪽의 먹이를 골라 먹음
 */
 
 #include<iostream>
 #include<queue>
+#define INF 1e+09
 
 using namespace std;
 
-queue<pair<int, int>> q;
-queue<pair<int, int>> target_q;
-int vst[21][21];
-int tb[21][21];
-int N;
-int sz = 2;
-int sz_cnt = 0;
-pair<int, int> st;
+queue<pair<int,int>> q;
+int vst[21][21], tb[21][21], N;
+int sz = 2, sz_cnt = 0;
 int answer = 0;
 
 int dx[] = {0, -1, 1, 0};
@@ -38,36 +33,52 @@ int main() {
     ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
     cin >> N;
-
+    
+    int x, y;
     for(int i = 0; i < N; ++i) {
         for(int j = 0; j < N; ++j) {
             cin >> tb[i][j];
-            if (tb[i][j] == 9) pair<int, int>(j, i).swap(st);
+            if (tb[i][j] == 9) {
+                x = j;
+                y = i;
+            }
         }
     }
-
-    int x = st.first;
-    int y = st.second;
-    int nextX, nextY;
+    
+    //시작점
     q.emplace(x, y);
+    vst[y][x] = 1;
     tb[y][x] = 0;
     
     // BFS
-    int level = -1;
+    int level = 0;
     while(q.size()) {
         int it = q.size();
         level += 1;
-        target_q = queue<pair<int, int>>();
+        int targetX = INF, targetY = INF;
         for(int i = 0; i < it; ++i) {
             x = q.front().first;
             y = q.front().second;
             q.pop();
 
-            if(isTarget(x, y)) target_q.emplace(x, y);
+            if(isTarget(x, y)) {
+                if(y <= targetY) {
+                    //상단
+                    if(y != targetY) {
+                        targetX = x;
+                        targetY = y;
+                    }
+                    //왼쪽
+                    else if(x < targetX) {
+                        targetX = x;
+                        targetY = y;
+                    }
+                }
+            }
 
             for(int j = 0; j < 4; ++j) {
-                nextX = x + dx[j];
-                nextY = y + dy[j];
+                int nextX = x + dx[j];
+                int nextY = y + dy[j];
 
                 if(isValid(nextX, nextY)) {
                     q.emplace(nextX, nextY);
@@ -76,49 +87,24 @@ int main() {
             }
         }
         
-        // 가장 상단 왼쪽 먹이 찾음
-        if(target_q.size() == 0) {
-                continue;
-            }
-        else if(target_q.size() == 1) {
-            nextX = target_q.front().first;
-            nextY = target_q.front().second;
-            target_q.pop();
-        }
-        else {
-            nextX = target_q.front().first;
-            nextY = target_q.front().second;
-            target_q.pop();
+        if (targetX < 0 || targetY < 0 || N <= targetX || N <= targetY) continue;
 
-            while(target_q.size()) {
-                int tempX = target_q.front().first;
-                int tempY = target_q.front().second;
-                target_q.pop();
-
-                if(tempY < nextY) {
-                    nextX = tempX;
-                    nextY = tempY;
-                }
-                if(tempY == nextY && tempX < nextX) {
-                    nextX = tempX;
-                    nextY = tempY;
-                }
-            }
-        }
-        
-        tb[nextY][nextX] = 0;
-        // 사이즈 check
+        // size와 answer 처리
         if (sz == ++sz_cnt) {
             sz++;
             sz_cnt = 0;
         }
-        answer += level;
-        level = -1;
-        // queue와 visit table 초기화
+        answer += level - 1;
+        
+        // queue와 visit, level 초기화
         q = queue<pair<int, int>>();
         fill(&vst[0][0], &vst[20][20], 0);
-        q.emplace(nextX, nextY);
-        vst[nextY][nextX] = 1;
+        level = 0;
+
+        // 새로운 시작점 할당
+        q.emplace(targetX, targetY);
+        vst[targetY][targetX] = 1;
+        tb[targetY][targetX] = 0;
     }
 
     cout << answer << "\n";
