@@ -27,3 +27,13 @@ def solution(people, limit):
         answer += 1
     
     return answer
+
+
+
+def s(p, t):
+    p.sort()
+    a, l, r = 0, 0, len(p)-1
+    while l <= r:
+        l, r, a = l + 1 if p[l] + p[r] <= t else l, r-1, a+1
+    
+    return a
