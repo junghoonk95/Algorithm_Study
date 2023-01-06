@@ -1,3 +1,4 @@
+# 에러ㅓ...
 n, k = map(int, input().split())
 w_list = []
 v_list = []
