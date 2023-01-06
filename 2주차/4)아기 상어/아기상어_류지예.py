@@ -1,3 +1,4 @@
+# 발표여서 코드보고 공부했어요.. 
 from collections import deque
 import heapq
 
