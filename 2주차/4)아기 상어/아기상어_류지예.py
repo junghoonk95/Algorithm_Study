@@ -1,4 +1,4 @@
-# 발표여서 코드보고 공부했어요.. 
+# 발표여서 코드보고 공부했어요.. 난 못 풀어..
 from collections import deque
 import heapq
 
