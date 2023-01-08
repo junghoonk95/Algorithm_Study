@@ -15,13 +15,14 @@ https://www.acmicpc.net/problem/2839
 https://www.acmicpc.net/problem/1931
 
 
-### 섬 연결하기
+## 추가 문제(금방 푸신분들을 위한)
+
+### 큰 수 만들기(추가)
+https://school.programmers.co.kr/learn/courses/30/lessons/42883
+
+### 섬 연결하기(추가 문제로 이동)
 https://school.programmers.co.kr/learn/courses/30/lessons/42861
 
-
-
-
-## 추가 문제(금방 푸신분들을 위한)
 
 ### 신입 사원
 https://www.acmicpc.net/problem/1946
