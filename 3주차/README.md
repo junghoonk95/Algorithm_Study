@@ -2,7 +2,7 @@
 
 # Weekly-Problem
 주차별 문제 풀이
-## 3주차-2 문제(2문제, 1.13 까지)
+## 3주차-2 (2문제, 1.13 까지)
 
 ### 동전
 https://www.acmicpc.net/problem/11047
@@ -20,7 +20,7 @@ https://www.acmicpc.net/problem/11501
 https://www.acmicpc.net/problem/1541
 
 
-## 3주차-1 문제(3문제, 1.9/1.10 까지)
+## 3주차-1 (3문제, 1.9/1.10 까지)
 
 ### 설탕배달
 
