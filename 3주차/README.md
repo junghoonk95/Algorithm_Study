@@ -19,6 +19,9 @@ https://www.acmicpc.net/problem/11501
 ### 잃어버린 괄호
 https://www.acmicpc.net/problem/1541
 
+### 저울
+https://www.acmicpc.net/problem/2437
+
 
 ## 3주차-1 (3문제, 1.9/1.10 까지)
 
