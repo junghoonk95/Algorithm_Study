@@ -6,8 +6,8 @@
 https://www.acmicpc.net/problem/1260
 
 ### 기능개발 
-https://school.programmers.co.kr/learn/courses/30/parts/12081
 
+https://school.programmers.co.kr/learn/courses/30/lessons/42586
 ### 바이러스
 https://www.acmicpc.net/problem/2606
 
