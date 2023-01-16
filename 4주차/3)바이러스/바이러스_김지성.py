@@ -1,18 +1,20 @@
-from sys import stdin
-read = stdin.readline
-dic={}
-for i in range(int(read())):
-    dic[i+1] = set()
-for j in range(int(read())):
-    a, b = map(int,read().split())
-    dic[a].add(b)
-    dic[b].add(a)
-
-def dfs(start, dic):
-    for i in dic[start]:
-        if i not in visited:
-            visited.append(i)
-            dfs(i, dic)
-visited = []
-dfs(1, dic)
-print(len(visited)-1)
+n = int(input())
+m = int(input())
+graph = [[]*n for _ in range(n+1)]
+for _ in range(m):
+    a,b = map(int,input().split())
+    graph[a].append(b)
+    graph[b].append(a)
+    
+cnt = 0
+visited = [0]*(n+1)
+def dfs(start):
+    global cnt
+    visited[start] = 1
+    for i in graph[start]:
+        if visited[i]==0:
+            dfs(i)
+            cnt +=1
+ 
+dfs(1)
+print(cnt)
