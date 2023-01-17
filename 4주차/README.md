@@ -11,11 +11,15 @@ https://school.programmers.co.kr/learn/courses/30/lessons/1844
 
 ## 추가문제
 
+### 안전영역
+https://www.acmicpc.net/problem/2468
+
 ### 단지번호붙이기
 https://www.acmicpc.net/problem/2667
 
 ### 미로찾기
 https://www.acmicpc.net/problem/2178
+
 
 
 ## 4주차-1 (3문제, 1.16/17 까지)
