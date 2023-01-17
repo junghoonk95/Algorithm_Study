@@ -37,6 +37,8 @@
 - 월/화 분반은 설문조사로 나누도록 하겠습니다
 
 ## 일정
-  
-![image](https://user-images.githubusercontent.com/80855939/210050839-1b84a078-1a6c-41c2-9a53-65dbc60617fa.png)
-![image](https://user-images.githubusercontent.com/80855939/210050881-59fbaca1-475a-47c5-bb0a-5dacec8653d8.png)
+
+![image](https://user-images.githubusercontent.com/80855939/212876719-4a8c7045-52c2-4528-b7d1-d24af44deac1.png)
+
+![image](https://user-images.githubusercontent.com/80855939/212876870-e12c47b0-19db-435d-a4de-1aeb440ebbbc.png)
+
