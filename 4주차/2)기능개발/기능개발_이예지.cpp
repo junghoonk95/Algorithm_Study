@@ -17,10 +17,9 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     
     int max = q.front();
     int count = 1;
+    q.pop();
     
     while(!q.empty()){
-        q.pop();
-        
         if(max >= q.front()){
             count += 1;
         }
@@ -29,9 +28,10 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
             max = q.front();
             count = 1;
         }
+        q.pop();
     }
     
-    answer.push_back(count-1);
+    answer.push_back(count);
     
     return answer;
 }
