@@ -11,6 +11,9 @@ https://school.programmers.co.kr/learn/courses/30/lessons/1844
 
 ## 추가문제
 
+### 숨박꼭질
+https://www.acmicpc.net/problem/1697
+
 ### 안전영역
 https://www.acmicpc.net/problem/2468
 
