@@ -9,7 +9,6 @@ dy = [1, -1, 0, 0]
 ans = []
 
 def bfs(queue, cnt): # 1인 노드들만 방문하고 cnt 구하기
-    global ans
     while queue:
         vr, vc = queue.popleft()
         graph[vr][vc] = 0
