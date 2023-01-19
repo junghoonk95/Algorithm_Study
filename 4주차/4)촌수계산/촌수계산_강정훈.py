@@ -32,5 +32,11 @@ def bfs(T1,T2):
                 count[i]=count[target]+1
                 q.append(i)
 
+                
+    if count[T2]==0: 
+        print(-1)
+    else: 
+        print(count[T2])
+
 bfs(T1,T2)
-print(count[T2])
+#print(count[T2])
