@@ -9,5 +9,13 @@ https://www.acmicpc.net/problem/1003
 ### 1로 만들기
 https://www.acmicpc.net/problem/1463
 
+### 계단 오르기
+https://www.acmicpc.net/problem/2579
 
 ## 추가문제
+
+### 정수 삼각형
+https://school.programmers.co.kr/learn/courses/30/lessons/43105
+
+### N으로 표현
+https://school.programmers.co.kr/learn/courses/30/lessons/42895
