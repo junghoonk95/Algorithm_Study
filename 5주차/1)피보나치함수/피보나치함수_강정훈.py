@@ -22,3 +22,25 @@ for i in range(N):
     fib1[1] = 1
     a=fibo(int(input()))
     print(a[0],a[1])
+    
+###############시간초과 버전
+
+
+N=int(input())
+def fibo(N):
+    global cnt0,cnt1
+    if N == 0:
+        cnt0 = cnt0 + 1
+        return 0
+    elif N == 1:
+        cnt1 = cnt1 + 1
+        return 1
+    else:
+        return fibo(N-1)+fibo(N-2)
+
+
+for i in range(N):
+    cnt0=0
+    cnt1=0
+    fibo(int(input()))
+    print(cnt0,cnt1)
