@@ -30,8 +30,6 @@ def move():
 
         nr %= N
         nc %= N
-
-
         f_balls[i] = [nr,nc,m,s,d]
 
 # 2.이동이 모두 끝난 뒤, 2개 이상의 파이어볼이 있는 칸에서는 다음과 같은 일이 일어난다.
@@ -42,8 +40,8 @@ def get_balls():
 
     for i in range(len(f_balls)):
         r,c,_,_,_ = f_balls[i]
-        # rc = ",".join(map(str,[r,c]))
-        pos[(r,c)].append(f_balls[i])
+        # rc = ",".join(map(str,[r,c]) 
+        pos[(r,c)].append(f_balls[i]) # dictionary의 key 값으로 tuple을 전달할 수 있음
 
 def process_balls():
     global f_balls
