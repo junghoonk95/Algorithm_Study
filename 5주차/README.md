@@ -22,3 +22,12 @@ https://school.programmers.co.kr/learn/courses/30/lessons/42895
 
 ### 동전 1
 https://www.acmicpc.net/problem/2293
+
+## 삼성전자 기출문제
+
+### 마법사 상어와 파이어
+https://www.acmicpc.net/problem/20056
+### 원자충돌
+https://www.codetree.ai/training-field/frequent-problems/atom-collision/description?page=2&pageSize=20&username=th1970
+
+(두 문제가 동일한 문제입니다.)
