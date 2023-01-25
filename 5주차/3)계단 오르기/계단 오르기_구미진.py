@@ -1,3 +1,5 @@
+# https://maktubi.tistory.com/267
+
 N = int(input())
 sc = [int(input()) for _ in range(N)]
 dp = [0] * N
