@@ -1,6 +1,15 @@
 # Weekly-Problem
 주차별 문제 풀이
 
+## 5주차-2 (2문제, 1.27 까지)
+
+### 부녀회장이 될테야
+https://www.acmicpc.net/problem/2775
+
+### 파도반 수열
+https://www.acmicpc.net/problem/9461
+
+
 ## 5주차 (3문제, 1.25 까지)
 
 ### 피보나치함수
