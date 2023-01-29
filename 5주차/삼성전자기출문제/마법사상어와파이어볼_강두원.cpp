@@ -20,6 +20,7 @@ int dx[] = {0, 1, 1, 1, 0, -1, -1, -1};
 int dy[] = {-1, -1, 0, 1, 1, 1, 0, -1};
 
 int trans_coord(int x) {
+    while(x<0) x+=N;
     return x % N;
 }
 
