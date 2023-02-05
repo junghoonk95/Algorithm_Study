@@ -13,3 +13,11 @@ https://www.acmicpc.net/problem/2630
 https://www.acmicpc.net/problem/1992
 
 
+## 삼성전자 기출문제
+
+### 치킨배달
+https://www.acmicpc.net/problem/15686
+### 병원 거리 최소화하기
+https://www.codetree.ai/training-field/frequent-problems/min-of-hospital-distance/description?page=1&pageSize=20&username=
+
+(두 문제가 동일한 문제입니다.)
