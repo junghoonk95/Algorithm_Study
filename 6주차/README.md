@@ -49,7 +49,7 @@ https://www.acmicpc.net/problem/14888
 
 ## 삼성전자 기출문제
 
-### 연구
+### 연구소
 https://www.acmicpc.net/problem/14502
 ### 방화벽 설치
 https://www.codetree.ai/training-field/frequent-problems/firewall-installation/
