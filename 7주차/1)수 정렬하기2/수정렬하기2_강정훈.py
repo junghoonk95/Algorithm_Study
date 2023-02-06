@@ -1,5 +1,6 @@
 # 일반 정렬
-
+# sorted() -> Timsort (merge)
+# sort() -> merge sort 
 N=int(input())
 
 number=[]
