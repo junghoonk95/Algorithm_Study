@@ -1,6 +1,16 @@
 # Weekly-Problem
 주차별 문제 풀이
 
+## 7주차 -2 (2문제, 2.10 까지)
+
+### 수 정렬하기 2 (sorted(), sort() 가 아닌 다른 정렬을 사용하여)
+* ※ nlogn 정렬 (퀵,힙정렬 등) 
+
+https://www.acmicpc.net/problem/2751
+
+### 종이의 개수
+https://www.acmicpc.net/problem/1780
+
 ## 7주차-1 (3문제, 2.7 까지)
 
 ### 수 정렬하기 2
