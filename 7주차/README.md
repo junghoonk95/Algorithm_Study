@@ -4,7 +4,7 @@
 ## 7주차 -2 (2문제, 2.10 까지)
 
 ### 수 정렬하기 2 (sorted(), sort() 가 아닌 다른 정렬을 사용하여)
-* ※ nlogn 정렬 (퀵,힙정렬 등) 
+* ※ nlogn 정렬 (머지정렬,힙정렬 등) 
 
 https://www.acmicpc.net/problem/2751
 
