@@ -1,5 +1,6 @@
 import sys
 import pprint
+import copy
 from collections import deque
 from itertools import combinations
 
@@ -7,64 +8,57 @@ input = sys.stdin.readline
 
 N, M = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(N)]
-pprint.pprint(graph)
+dx = [0, 0, -1, 1]
+dy = [1, -1, 0, 0]
+
+answer = 0
 cnt = 0
 
-ans = 0
-
-def bfs():
-    check = [[0]*M for _ in range(N)]
-    dr = [-1, 1, 0, 0]
-    dc = [0, 0, -1, 1]
-
+def spread_virus(grp):
     q = deque()
-
     for n in range(N):
         for m in range(M):
-            if graph[n][m] == 2:
-                # print(n, m)
+            if grp[n][m] == 2:
                 q.append((n, m))
-            # print(q)
 
     while q:
-        now_r, now_c = q.popleft()
+        x, y = q.popleft()
 
         for i in range(4):
-            # print('ori : ', now_r, now_c)
-            new_r, new_c = dr[i] + now_r, dc[i] + now_c
-            # print('after : ', new_r, new_c)
-
-            if (new_c < 0 or new_r > N-1) or (new_c < 0 or new_c > M-1):
-                continue
-            if 0 <= new_c < N-1 and 0 <= new_c < M-1:
-                if check[new_r][new_c] == 0 and graph[new_r][new_c] == 0:
-                    check[new_r][new_c] = 1
-                    q.append((new_r, new_c))
-    print(check)
+            nx, ny = dx[i] + x, dy[i] + y
+            if 0 <= nx < N and 0 <= ny < M:
+                if grp[nx][ny] == 0:
+                    grp[nx][ny] = 2
+                    q.append((nx, ny))
+    return grp
 
 
+def make_wall():
+    global answer
+    zeros_pos = []
 
-def check_zone(graph):
-    temp = 0
-    for n in range(N):
-        for m in range(M):
-            if graph[n][m] == 0:
-                temp += 1
-    return temp
+    for r in range(N):
+        for c in range(M):
+            if graph[r][c] == 0:
+                zeros_pos.append((r, c))
+
+    wall_list = list(combinations(zeros_pos, 3))
 
 
-for n in range(N):
-    for m in range(M):
-        if graph[n][m] == 0:
-            graph[n][m] = 1
-            cnt += 1
+    for three_wall in wall_list:
+        copy_graph = copy.deepcopy(graph)
 
-            if cnt == 3:
-                bfs()
+        for r, c in three_wall:
+            copy_graph[r][c] = -1
 
-                # value = check_zone(graph)
-                cnt = 0
-                continue
+        copy_graph = spread_virus(copy_graph)
 
-        # if value > ans:
-        #     ans = value
+        temp = 0
+        for i in range(N):
+            temp += copy_graph[i].count(0)
+
+        if temp > answer:
+            answer = temp
+
+make_wall()
+print(answer)
