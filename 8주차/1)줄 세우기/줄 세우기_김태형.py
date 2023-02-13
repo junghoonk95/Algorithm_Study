@@ -1,3 +1,5 @@
+# https://freedeveloper.tistory.com/390
+
 from collections import deque
 
 # N : 노드 개수, M : 간선 개수
