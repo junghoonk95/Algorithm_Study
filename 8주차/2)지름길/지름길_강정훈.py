@@ -13,7 +13,9 @@ for i in range(D+1):
 
         if j[0]<=D: # 지름길 <고속도로
             # print(j, D, dist[i], dist[j[0]])
-            if dist[j[0]]> j[1] +dist[i]: # 기존 지름길 도착점까지 거리 >  지름길 길이 + 기존
+            if dist[j[0]]> j[1] +dist[i]: # 기존 고속도로 >  지름길 길이+ 시작점까지 100> 10+10 ,140>90+30
+                print(dist[j[0]],j[1],dist[i],i)
+                print(dist)
                 dist[j[0]]=j[1]+dist[i]  # 지름길
 
 print(dist[D])
